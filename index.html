@@ -130,17 +130,37 @@
     };
 
     async function handleAuth() {
-        const calendarId = "ce4cebe9ac636039f430d902b645559d5ae574e7a777b9935264010155775901@group.calendar.google.com";
-        try {
-            await gapi.client.calendar.calendarList.insert({
-                resource: {
-                    id: calendarId
-                }
-            });
-            alert("Kalendarz został dodany!");
-        } catch (err) {
-            alert("Błąd: " + err.message);
-        }
+         // Pobierz parametr z linku ?cal=XX
+    const urlParams = new URLSearchParams(window.location.search);
+    const calParam = urlParams.get("cal");
+
+    // Lista wszystkich kalendarzy (dodasz tu tyle, ile potrzebujesz)
+    const CALENDARS = {
+        "A": "ce4cebe9ac636039f430d902b645559d5ae574e7a777b9935264010155775901@group.calendar.google.com",
+        "B": "72c5cc8df4028c9b6b1a02bf481939f73129494bff527d82266c7eb05d02f670@group.calendar.google.com"
+    };
+
+    // Wybierz kalendarz po parametrze
+    const calendarId = CALENDARS[calParam];
+
+    // Jeśli nie istnieje — złe wejście
+    if (!calendarId) {
+        alert("Nieprawidłowy link — kalendarz nie istnieje.");
+        return;
+    }
+
+    // Dodaj kalendarz
+    try {
+        await gapi.client.calendar.calendarList.insert({
+            resource: { id: calendarId }
+        });
+
+        // 🔵 TU WŁAŚNIE JEST KOMUNIKAT O POPRAWNYM DODANIU
+        alert("Kalendarz został poprawnie dodany do Twojego konta Google!");
+
+    } catch (err) {
+        alert("Błąd podczas dodawania kalendarza: " + err.message);
+    }
     }
 </script>
 
@@ -149,6 +169,7 @@
 
 </body>
 </html>
+
 
 
 

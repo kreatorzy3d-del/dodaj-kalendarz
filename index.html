@@ -6,49 +6,27 @@
     <script src="https://apis.google.com/js/api.js"></script>
 
     <style>
-    /* Zmniejszenie czcionki opisu — TYLKO opis */
-   /* Wymuszenie wyrównania do lewej na całej stronie */
-    body, html {
-        text-align: left !important;
-    }
+   body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
 
-    /* Wymuszenie, aby kontener opisu nie był centrowany */
-    #opis {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 20px !important;
-        text-align: left !important;
-        display: block !important;
-    }
+        /* USTAWIENIE TEKSTU PO LEWEJ – WYMUSZONE */
+        .content {
+            text-align: left !important;
+            width: 100% !important;
+            max-width: 700px !important;
+        }
 
-    /* Wymuszenie, aby wszystkie nagłówki i paragrafy były po lewej */
-    #opis h1, 
-    #opis h2, 
-    #opis h3, 
-    #opis p {
-        text-align: left !important;
-    }
-.content {
-        width: 100%;
-        max-width: 600px;      /* można zmienić wg uznania */
-        margin: 0;             /* usuwa centrowanie */
-        padding-left: 20px;    /* lekki margines */
-        text-align: left !important;
-    }
+        h1, h2, p {
+            text-align: left !important;
+        }
 
-    /* Cały opis aplikacji mniejszy */
-    .content p, .content h2, .content h3 {
-        font-size: 12px !important;
-        line-height: 1.2;
-    }
-
-    /* Nagłówek sekcji "Dodaj kalendarz" */
-    .section-title {
-        font-size: 28px;
-        text-align: left !important;
-        margin-left: 20px;
-    }
-
+        /* ZMNIEJSZENIE OPISU – WYMUSZONE */
+        .desc {
+            font-size: 13px !important;
+            line-height: 1.4 !important;
+        }
 
         
     .top-bar {
@@ -99,15 +77,15 @@
     
 <section style="max-width: 800px; margin: 20px auto; font-family: Arial; line-height: 1.6; color: #222;">
     <h1 style="font-size: 28px; margin-bottom: 10px;">Dodaj Kalendarz</h1>
-<div id="opis">
+<div class="content">
     <h2 style="font-size: 20px; margin-top: 20px;">Czym jest ta aplikacja?</h2>
-    <p>
+    <p class="desc">
         Ta aplikacja umożliwia szybkie dodanie naszego kalendarza do Twojego konta Google. 
         Dzięki temu możesz wygodnie przeglądać terminy, wydarzenia i aktualizacje przekazywane przez usługodawcę.
     </p>
 
     <h2 style="font-size: 20px; margin-top: 20px;">Co ta aplikacja robi?</h2>
-    <p>
+    <p class="desc">
         Po kliknięciu przycisku „Dodaj kalendarz” zostaniesz poproszony o zalogowanie się na swoje 
         konto Google oraz udzielenie dostępu do Twojego Kalendarza Google. Aplikacja automatycznie 
         doda nasz kalendarz do Twojej listy kalendarzy, abyś mógł go wygodnie wyświetlać w aplikacji Google Calendar.
@@ -115,7 +93,7 @@
     </p>
 
     <h2 style="font-size: 20px; margin-top: 20px;">Dlaczego aplikacja prosi o dostęp do Kalendarza Google?</h2>
-    <p>
+    <p class="desc">
         Dostęp jest potrzebny wyłącznie po to, aby dodać nasz kalendarz do Twojego konta Google. 
         Dzięki temu będziesz mógł przeglądać wydarzenia i aktualizacje udostępniane przez usługodawcę. 
         Aplikacja nie zapisuje ani nie przechowuje żadnych danych o użytkownikach. 
@@ -178,6 +156,7 @@
 
 </body>
 </html>
+
 
 
 

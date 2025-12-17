@@ -17,19 +17,30 @@
     line-height: 1.2;
     }
 
-    /* Powiększenie przycisku Dodaj kalendarz */
-    #authorize_button {
-        font-size: 20px;      /* większa czcionka */
-        padding: 12px 24px;   /* większy przycisk */
-        background-color: #007bff;
+    .top-bar {
+        display: flex;
+        align-items: center;
+        gap: 20px;           /* odstęp między tekstem a przyciskiem */
+        padding: 20px 0;
+    }
+
+    .top-bar h1 {
+        margin: 0;
+        font-size: 28px;     /* zmniejsz, jeśli chcesz ładniejszy wygląd */
+    }
+
+    #authButton {
+        padding: 10px 20px;
+        font-size: 18px;      /* wielkość czcionki przycisku */
+        background-color: #1976d2;
         color: white;
         border: none;
         border-radius: 8px;
         cursor: pointer;
     }
 
-    #authorize_button:hover {
-        background-color: #0056b3;
+    #authButton:hover {
+        background-color: #125a9e;
     }
 </style>
 
@@ -39,9 +50,10 @@
 <body>
 
     </section>
+<div class="top-bar">
 <h1>Dodaj Mój Kalendarz Powiadomień -></h1> 
 <button id="authorize_button">Dodaj kalendarz</button>
-
+</div>
 
 <p style="margin-top:20px;">
   <a href="privacy.html">Polityka prywatności</a>
@@ -132,6 +144,7 @@
 
 </body>
 </html>
+
 
 
 

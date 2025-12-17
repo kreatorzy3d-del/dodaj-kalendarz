@@ -9,22 +9,26 @@
     /* Zmniejszenie czcionki opisu — TYLKO opis */
    
 .content {
-        max-width: 600px;
-        margin: 0;          /* USUNIĘCIE wyśrodkowania */
-        padding: 0;
-        text-align: left;   /* WYMUSZENIE wyrównania do lewej */
+        width: 100%;
+        max-width: 600px;      /* można zmienić wg uznania */
+        margin: 0;             /* usuwa centrowanie */
+        padding-left: 20px;    /* lekki margines */
+        text-align: left !important;
     }
 
-    /* Zmniejszamy czcionki */
-    .content h2 {
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .content p {
-        font-size: 12px;   /* DUŻO MNIEJSZE */
+    /* Cały opis aplikacji mniejszy */
+    .content p, .content h2, .content h3 {
+        font-size: 12px !important;
         line-height: 1.2;
     }
+
+    /* Nagłówek sekcji "Dodaj kalendarz" */
+    .section-title {
+        font-size: 28px;
+        text-align: left !important;
+        margin-left: 20px;
+    }
+
 
         
     .top-bar {
@@ -154,6 +158,7 @@
 
 </body>
 </html>
+
 
 
 

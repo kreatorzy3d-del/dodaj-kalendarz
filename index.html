@@ -7,7 +7,27 @@
 
     <style>
     /* Zmniejszenie czcionki opisu — TYLKO opis */
-   
+   /* Wymuszenie wyrównania do lewej na całej stronie */
+    body, html {
+        text-align: left !important;
+    }
+
+    /* Wymuszenie, aby kontener opisu nie był centrowany */
+    #opis {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 20px !important;
+        text-align: left !important;
+        display: block !important;
+    }
+
+    /* Wymuszenie, aby wszystkie nagłówki i paragrafy były po lewej */
+    #opis h1, 
+    #opis h2, 
+    #opis h3, 
+    #opis p {
+        text-align: left !important;
+    }
 .content {
         width: 100%;
         max-width: 600px;      /* można zmienić wg uznania */
@@ -79,7 +99,7 @@
     
 <section style="max-width: 800px; margin: 20px auto; font-family: Arial; line-height: 1.6; color: #222;">
     <h1 style="font-size: 28px; margin-bottom: 10px;">Dodaj Kalendarz</h1>
-<div class="content">
+<div id="opis">
     <h2 style="font-size: 20px; margin-top: 20px;">Czym jest ta aplikacja?</h2>
     <p>
         Ta aplikacja umożliwia szybkie dodanie naszego kalendarza do Twojego konta Google. 
@@ -158,6 +178,7 @@
 
 </body>
 </html>
+
 
 
 

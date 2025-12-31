@@ -1,171 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-    <title>Dodaj mój kalendarz</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="https://apis.google.com/js/api.js"></script>
+    <meta charset="UTF-8">
+    <title>Kreatorzy3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-
-        /* ZMNIEJSZENIE OPISU – WYMUSZONE */
-        .desc {
-            font-size: 13px !important;
-            line-height: 1.4 !important;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
         }
 
-        
-    .top-bar {
-        display: flex;
-        align-items: center;
-        gap: 20px;           /* odstęp między tekstem a przyciskiem */
-        padding: 20px 0;
-    }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
 
-    .top-bar h1 {
-        margin: 0;
-        font-size: 28px;     /* zmniejsz, jeśli chcesz ładniejszy wygląd */
-    }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
 
-    #authorize_button {
-        font-size: 20px;      /* większa czcionka */
-        padding: 30px 60px;   /* większy przycisk */
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+        }
 
-    #authorize_button:hover {
-        background-color: #0056b3;
-    }
-
-        .arrow {
-    font-size: 32px;
-    font-weight: bold;
-    color: #007bff;   /* kolor dopasowany do przycisku */
-    margin-top: 5px;
-}
-</style>
-
-
-
+        footer {
+            margin-top: 80px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
-    </section>
-<div class="top-bar">
-    <h1>Dodaj Mój Kalendarz Powiadomień</h1>
+<div class="container">
+    <h1>Witamy w Kreatorzy3D</h1>
 
-    <!-- STRZAŁKA -->
-    <span class="arrow">➜</span>
+    <p>
+        Kreatorzy3D to studio realizujące nowoczesne i proste rozwiązania cyfrowe
+        dla klientów indywidualnych oraz firm. Tworzymy narzędzia, które ułatwiają
+        komunikację, automatyzację oraz zarządzanie informacjami.
+    </p>
 
-    <button id="authorize_button">Dodaj kalendarz</button>
+    <p>
+        Jednym z naszych projektów jest aplikacja umożliwiająca szybkie dodanie
+        kalendarza powiadomień do Kalendarza Google, dzięki czemu użytkownicy
+        otrzymują aktualne informacje bezpośrednio na swoje urządzenia.
+    </p>
+
+    <footer>
+        <p><strong>Kreatorzy3D</strong></p>
+        <p>Kontakt: kreatorzy3d@gmail.com</p>
+    </footer>
 </div>
-
-<p style="margin-top:20px;">
-  <a href="privacy.html">Polityka prywatności</a>
-</p>
-<p><strong>Twórca:</strong> Kreatorzy3D</p> 
-<p>
-  <strong>Kontakt:</strong> kreatorzy3d@gmail.com
-</p>
-    
-    <h1>Dodaj Kalendarz</h1>
-    <h2 style="font-size: 20px; margin-top: 20px;">Czym jest ta aplikacja?</h2>
-    <p class="desc">
-        Ta aplikacja umożliwia szybkie dodanie naszego kalendarza do Twojego konta Google. 
-        Dzięki temu możesz wygodnie przeglądać terminy, wydarzenia i aktualizacje przekazywane przez usługodawcę.
-    </p>
-
-    <h2 style="font-size: 20px; margin-top: 20px;">Co ta aplikacja robi?</h2>
-    <p class="desc">
-        Po kliknięciu przycisku „Dodaj kalendarz” zostaniesz poproszony o zalogowanie się na swoje 
-        konto Google oraz udzielenie dostępu do Twojego Kalendarza Google. Aplikacja automatycznie 
-        doda nasz kalendarz do Twojej listy kalendarzy, abyś mógł go wygodnie wyświetlać w aplikacji Google Calendar.
-        Aplikacja nie modyfikuje Twoich prywatnych kalendarzy ani nie pobiera żadnych dodatkowych danych.
-    </p>
-
-    <h2 style="font-size: 20px; margin-top: 20px;">Dlaczego aplikacja prosi o dostęp do Kalendarza Google?</h2>
-    <p class="desc">
-        Dostęp jest potrzebny wyłącznie po to, aby dodać nasz kalendarz do Twojego konta Google. 
-        Dzięki temu będziesz mógł przeglądać wydarzenia i aktualizacje udostępniane przez usługodawcę. 
-        Aplikacja nie zapisuje ani nie przechowuje żadnych danych o użytkownikach. 
-        W każdej chwili możesz usunąć kalendarz ze swojego konta.
-    </p>
-
-<script>
-    const CLIENT_ID = "306142273186-pulgqg887a0oplv02o54e0d4j0si062d.apps.googleusercontent.com";
-    const API_KEY = "";
-    const SCOPES = "https://www.googleapis.com/auth/calendar";
-
-    let tokenClient;
-    let gapiInited = false;
-    let gisInited = false;
-
-    function gapiLoaded() {
-        gapi.load("client", initializeGapiClient);
-    }
-
-    async function initializeGapiClient() {
-        await gapi.client.init({
-            apiKey: API_KEY,
-            discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
-        });
-        gapiInited = true;
-    }
-
-    function gisLoaded() {
-        tokenClient = google.accounts.oauth2.initTokenClient({
-            client_id: CLIENT_ID,
-            scope: SCOPES,
-            callback: handleAuth,
-        });
-        gisInited = true;
-    }
-
-    document.getElementById("authorize_button").onclick = () => {
-        if (!gapiInited || !gisInited) return;
-        tokenClient.requestAccessToken();
-    };
-
-    async function handleAuth() {
-         // Pobierz parametr z linku ?cal=XX
-    const urlParams = new URLSearchParams(window.location.search);
-    const calParam = urlParams.get("cal");
-
-    // Lista wszystkich kalendarzy (dodasz tu tyle, ile potrzebujesz)
-    const CALENDARS = {
-        "A": "ce4cebe9ac636039f430d902b645559d5ae574e7a777b9935264010155775901@group.calendar.google.com",
-        "B": "72c5cc8df4028c9b6b1a02bf481939f73129494bff527d82266c7eb05d02f670@group.calendar.google.com"
-    };
-
-    // Wybierz kalendarz po parametrze
-    const calendarId = CALENDARS[calParam];
-
-    // Jeśli nie istnieje — złe wejście
-    if (!calendarId) {
-        alert("Nieprawidłowy link — kalendarz nie istnieje.");
-        return;
-    }
-
-    // Dodaj kalendarz
-    try {
-        await gapi.client.calendar.calendarList.insert({
-            resource: { id: calendarId }
-        });
-
-        // 🔵 TU WŁAŚNIE JEST KOMUNIKAT O POPRAWNYM DODANIU
-        alert("Kalendarz został poprawnie dodany do Twojego konta Google!");
-
-    } catch (err) {
-        alert("Błąd podczas dodawania kalendarza: " + err.message);
-    }
-    }
-</script>
-
-<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 
 </body>
 </html>

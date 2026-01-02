@@ -3,65 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Kreatorzy3D</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #ffffff;
+            background: linear-gradient(135deg, #f5f7fa, #e9eef3);
             color: #222;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
+        /* Nagłówek */
         h1 {
+            text-align: center;
             font-size: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
-        p {
-            font-size: 18px;
+        /* Sekcja O nas */
+        .about-box {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .about-box h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about-box p {
+            font-size: 16px;
             line-height: 1.6;
-            max-width: 700px;
+            margin-bottom: 15px;
+            text-align: left;
         }
 
-        footer {
-            margin-top: 80px;
+        /* Stopka */
+        .footer {
+            margin-top: 60px;
             font-size: 14px;
-            color: #666;
+            color: #555;
+        }
+
+        .footer strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .container {
+                padding: 50px 15px;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+
     <h1>Witamy w Kreatorzy3D</h1>
 
-    <p>
-        Kreatorzy3D to studio realizujące nowoczesne i proste rozwiązania cyfrowe
-        dla klientów indywidualnych oraz firm. Tworzymy narzędzia, które ułatwiają
-        komunikację, automatyzację oraz zarządzanie informacjami.
-    </p>
+    <div class="about-box">
+        <h2>O nas</h2>
 
-    <p>
-        Jednym z naszych projektów jest aplikacja umożliwiająca szybkie dodanie
-        kalendarza powiadomień do Kalendarza Google, dzięki czemu użytkownicy
-        otrzymują aktualne informacje bezpośrednio na swoje urządzenia.
-    </p>
+        <p>
+            Kreatorzy3D to studio realizujące nowoczesne i proste rozwiązania cyfrowe
+            dla klientów indywidualnych oraz firm.
+        </p>
 
-    <footer>
-        <p><strong>Kreatorzy3D</strong></p>
-        <p>Kontakt: kreatorzy3d@gmail.com</p>
-    </footer>
+        <p>
+            Tworzymy narzędzia, które ułatwiają komunikację, automatyzację
+            oraz zarządzanie informacjami.
+        </p>
+
+        <p>
+            Jednym z naszych projektów jest aplikacja umożliwiająca szybkie dodanie
+            kalendarza powiadomień do Kalendarza Google, dzięki czemu użytkownicy
+            otrzymują aktualne informacje bezpośrednio na swoje urządzenia.
+        </p>
+    </div>
+
+    <div class="footer">
+        <strong>Kreatorzy3D</strong>
+        Kontakt: kreatorzy3d@gmail.com
+    </div>
+
 </div>
 
 </body>
 </html>
+
+
 
 
 

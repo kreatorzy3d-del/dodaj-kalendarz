@@ -7,81 +7,70 @@
 
     <style>
         body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111;
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #111;
 
-            /* CZARNO-BIAŁE TŁO */
-            background: radial-gradient(
-                circle at top left,
-                #ffffff 0%,
-                #e6e6e6 30%,
-                #bfbfbf 55%,
-                #4d4d4d 75%,
-                #000000 100%
-            );
-        }
+        /* DOKŁADNE TŁO */
+        background-image: url("background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 80px 20px;
+    }
 
-        /* NAGŁÓWEK */
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 60px;
+        color: #ffffff;
+        text-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    }
+
+    .about-box {
+        background: rgba(255, 255, 255, 0.88);
+        border-radius: 18px;
+        padding: 40px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(6px);
+    }
+
+    .about-box h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 28px;
+        border-bottom: 2px solid #000;
+        display: inline-block;
+        padding-bottom: 6px;
+    }
+
+    .about-box p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    @media (max-width: 600px) {
         h1 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 60px;
-            color: #000;
+            font-size: 30px;
         }
-
-        /* RAMKA "O NAS" */
         .about-box {
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            padding: 25px;
         }
-
-        .about-box h2 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 28px;
-            border-bottom: 2px solid #000;
-            display: inline-block;
-            padding-bottom: 6px;
-        }
-
-        .about-box p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        /* STOPKA */
-        .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .footer strong {
-            display: block;
-            margin-top: 10px;
-        }
-
-        /* RESPONSYWNOŚĆ */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 32px;
-            }
-
-            .about-box {
-                padding: 25px;
-            }
-        }
+    }
     </style>
 </head>
 
@@ -118,6 +107,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instrukcja dodania kalendarza</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.column {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.column h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.steps {
+    counter-reset: step;
+}
+
+.step {
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #007bff;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ANDROID -->
+    <div class="column">
+        <h2>📱 Android</h2>
+        <div class="steps">
+            <div class="step">
+                Jeżeli chcesz dodać sam kalendarz na pulpit telefonu, kliknij w link opisany jak na zdjęciu, dostępny po przyłożeniu breloka do telefonu.
+            </div>
+            <div class="step">
+                Następnie wykonaj kroki zgodnie z kolejnością przedstawioną na zdjęciach. Po ich zakończeniu skrót do kalendarza będzie dostępny na pulpicie telefonu.
+            </div>
+            <div class="step">
+                Jeżeli chcesz dodać powiadomienia o transmisji, sprawdź czy masz zainstalowaną aplikację Google Calendar.
+            </div>
+            <div class="step">
+                Jeżeli aplikacja nie jest zainstalowana, pobierz ją klikając w ten link:
+                <br>
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.calendar" target="_blank">
+                    Pobierz Google Calendar
+                </a>
+            </div>
+            <div class="step">
+                Po zainstalowaniu zaloguj się w aplikacji na swoje konto Gmail.
+            </div>
+            <div class="step">
+                Skonfiguruj terminy oraz sposób otrzymywania powiadomień zgodnie z załączonymi zdjęciami.
+            </div>
+            <div class="step">
+                Jeżeli nie chcesz przegapić żadnego powiadomienia, wykonaj poniższe kroki przedstawione w instrukcji.
+            </div>
+            <div class="step">
+                Gotowe — wszystko zostało poprawnie skonfigurowane 😊
+            </div>
+        </div>
+    </div>
+
+    <!-- IPHONE -->
+    <div class="column">
+        <h2>🍎 iPhone (iOS)</h2>
+        <div class="steps">
+            <div class="step">
+                Jeżeli chcesz dodać sam kalendarz na pulpit telefonu, kliknij w link opisany jak na zdjęciu, dostępny po przyłożeniu breloka do telefonu.
+            </div>
+            <div class="step">
+                Następnie wykonaj kroki zgodnie z kolejnością przedstawioną na zdjęciach. Po ich zakończeniu skrót do kalendarza będzie dostępny na pulpicie telefonu.
+            </div>
+            <div class="step">
+                Jeżeli chcesz dodać powiadomienia o transmisji, sprawdź czy masz zainstalowaną aplikację Google Calendar.
+            </div>
+            <div class="step">
+                Jeżeli aplikacja nie jest zainstalowana, pobierz ją klikając w ten link:
+                <br>
+                <a href="https://apps.apple.com/app/google-calendar-get-organized/id909319292" target="_blank">
+                    Pobierz Google Calendar
+                </a>
+            </div>
+            <div class="step">
+                Po zainstalowaniu zaloguj się w aplikacji na swoje konto Gmail.
+            </div>
+            <div class="step">
+                Skonfiguruj terminy oraz sposób otrzymywania powiadomień zgodnie z załączonymi zdjęciami.
+            </div>
+            <div class="step">
+                Jeżeli nie chcesz przegapić żadnego powiadomienia, wykonaj poniższe kroki przedstawione w instrukcji.
+            </div>
+            <div class="step">
+                Gotowe — wszystko zostało poprawnie skonfigurowane 😊
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
 

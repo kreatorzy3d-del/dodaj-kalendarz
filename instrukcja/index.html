@@ -6,39 +6,7 @@
 <title>Instrukcja dodania kalendarza</title>
 
 <style>
-    /* GALERIA */
-.gallery {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    margin-top: 10px;
-}
-
-.gallery img {
-    max-width: 80%;
-    border-radius: 8px;
-    cursor: pointer;
-    scroll-snap-align: start;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* LIGHTBOX */
-.lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
+    
 
 body {
     font-family: Arial, sans-serif;
@@ -119,7 +87,39 @@ a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+/* GALERIA */
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-top: 10px;
+}
 
+.gallery img {
+    max-width: 80%;
+    border-radius: 8px;
+    cursor: pointer;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
 </style>
 </head>
 

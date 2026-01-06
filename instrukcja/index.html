@@ -108,7 +108,7 @@ a:hover {
 }
 .galllery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 zdjęcia obok siebie */
+    grid-template-columns: repeat(3, 1fr); /* 3 zdjęcia obok siebie */
     gap: 10px;
     margin-top: 10px;
     justify-items: center;
@@ -333,6 +333,27 @@ a:hover {
         <span class="img-number">5</span>
         <img src="images/krok77-5.jpeg">
     </div>
+                </div>
+                    <div class="gallery">
+        <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">1</span>
+    <img src="images/krok777-1.jpeg" alt="Krok 2 - zdjęcie 1">
+</div>
+
+<div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">2</span>
+    <img src="images/krok777-2.jpeg" alt="Krok 2 - zdjęcie 2">
+</div>
+ <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok777-3.jpeg">
+    </div>
+
+    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">4</span>
+        <img src="images/krok777-4.jpeg">
+    </div>
+
                 </div>
             </div>
             <div class="step">

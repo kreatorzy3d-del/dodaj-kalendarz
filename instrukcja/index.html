@@ -125,27 +125,22 @@ a:hover {
     max-height: 90%;
     border-radius: 10px;
 }
-    .img-box {
-    position: relative;
-    display: inline-block;
+   .img-box {
+    display: flex;
+    align-items: flex-start; /* góra */
+    gap: 6px;
+    cursor: pointer;
 }
 
 .img-number {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    background: #007bff;
-    color: #fff;
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
-    font-size: 14px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-size: 16px;
+    color: #000;              /* 🔥 czarny */
+    line-height: 1;
+    margin-top: 4px;          /* precyzyjne wyrównanie do góry zdjęcia */
+    flex-shrink: 0;
 }
+
 
 </style>
 </head>

@@ -90,19 +90,23 @@ a:hover {
 /* GALERIA */
 .gallery {
     display: flex;
-    gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0;
     margin-top: 10px;
 }
 
 .gallery img {
-    max-width: 80%;
+    flex: 0 0 70%;        /* 🔥 dokładnie 1 zdjęcie */
+    max-width: 100%;
+    height: auto;
+    scroll-snap-align: center;
     border-radius: 8px;
     cursor: pointer;
-    scroll-snap-align: start;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+
 
 /* LIGHTBOX */
 .lightbox {

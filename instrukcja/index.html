@@ -106,7 +106,24 @@ a:hover {
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+.galllery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 zdjęcia obok siebie */
+    gap: 10px;
+    margin-top: 10px;
+    justify-items: center;
+}
 
+
+
+.galllery img {
+    width: 50%;          /* 🔥 ZMNIEJSZENIE */
+    max-width: 120px;    /* 🔥 LIMIT ROZMIARU */
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 
 
 /* LIGHTBOX */
@@ -195,9 +212,25 @@ a:hover {
                     Pobierz Google Calendar
                 </a>
             </div>
-            
             <div class="step">
-                Skonfiguruj terminy oraz sposób otrzymywania powiadomień zgodnie z załączonymi zdjęciami.
+                Kliknij utworzony na pulpicie telefonu w poprzednich krokach skrót do kalendarza i postępuj zgodnie ze zdjęciami załączonymi poniżej.
+                <div class="galllery">
+        <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">1</span>
+    <img src="images/krok22-4.jpeg" alt="Krok 2 - zdjęcie 1">
+</div>
+
+<div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">2</span>
+    <img src="images/krok55-1.jpeg" alt="Krok 2 - zdjęcie 2">
+</div>
+ <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok55-2.jpeg">
+    </div>
+            </div>
+            <div class="step">
+                Skonfiguruj ile czasu przed wydarzeniami chcesz otrzymywać powiadomienia zgodnie z załączonymi zdjęciami.
             </div>
             <div class="step">
                 Jeżeli nie chcesz przegapić żadnego powiadomienia, wykonaj poniższe kroki przedstawione w instrukcji.

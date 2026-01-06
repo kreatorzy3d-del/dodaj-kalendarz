@@ -89,20 +89,19 @@ a:hover {
 }
 /* GALERIA */
 .gallery {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 zdjęcia obok siebie */
+    gap: 10px;
     margin-top: 10px;
-
-    padding-inline: 30%;   /* 🔥 KLUCZ */
+    justify-items: center;
 }
 
 
+
 .gallery img {
-    flex: 0 0 40%;
-    margin: 0 auto;                /* 🔥 CENTROWANIE */
-    scroll-snap-align: center;
+    width: 70%;          /* 🔥 ZMNIEJSZENIE */
+    max-width: 160px;    /* 🔥 LIMIT ROZMIARU */
+    height: auto;
     border-radius: 8px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);

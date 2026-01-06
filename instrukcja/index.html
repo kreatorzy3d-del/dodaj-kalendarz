@@ -142,7 +142,24 @@ a:hover {
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+.gallery8 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 2 zdjęcia obok siebie */
+    gap: 10px;
+    margin-top: 10px;
+    justify-items: center;
+}
 
+
+
+.gallery8 img {
+    width: 50%;          /* 🔥 ZMNIEJSZENIE */
+    max-width: 120px;    /* 🔥 LIMIT ROZMIARU */
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
 /* LIGHTBOX */
 .lightbox {
     display: none;
@@ -332,9 +349,67 @@ a:hover {
             </div>
             <div class="step">
                 Teraz skonfiguruj według własnych preferencji ile czasu przed wydarzeniami chcesz otrzymywać powiadomienia, zgodnie z załączonymi poniżej zdjęciami.
+                <br>
+    <strong>🔍Kliknij w zdjęcie, aby powiększyć.</strong>
+                <div class="gallery7">
+        <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">1</span>
+    <img src="images/krok7-1.jpeg" alt="Krok 2 - zdjęcie 1">
+</div>
+
+<div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">2</span>
+    <img src="images/krok7-2.jpeg" alt="Krok 2 - zdjęcie 2">
+</div>
+ <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok7-3.jpeg">
+    </div>
+                    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok7-4.jpeg">
+    </div>
+                    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok7-5.jpeg">
+    </div>
+                    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok7-6.jpeg">
+    </div>
+                    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok7-7.jpeg">
+    </div>
+                </div>
             </div>
             <div class="step">
                 Aby aktywować ustawione powiadomienia, wykonaj poniższe kroki przedstawione na zdjęciach.
+                <br>
+    <strong>🔍Kliknij w zdjęcie, aby powiększyć.</strong>
+                <div class="gallery8">
+        <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">1</span>
+    <img src="images/krok8-1.jpeg" alt="Krok 2 - zdjęcie 1">
+</div>
+
+<div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">2</span>
+    <img src="images/krok8-2.jpeg" alt="Krok 2 - zdjęcie 2">
+</div>
+ <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok8-3.jpeg">
+    </div>
+                    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok8-4.jpeg">
+    </div>
+                    <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+        <span class="img-number">3</span>
+        <img src="images/krok8-5.jpeg">
+    </div>
+                </div>
             </div>
             <div class="step">
                 Gotowe — wszystko zostało poprawnie skonfigurowane 😊

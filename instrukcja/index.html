@@ -212,12 +212,14 @@ a:hover {
          
             </div>
             <div class="step">
-    Następnie wykonaj kroki zgodnie z kolejnością przedstawioną na zdjęciach. Po ich zakończeniu skrót do kalendarza będzie dostępny na pulpicie telefonu.
+    Następnie wykonaj kroki przedstawione na zdjęciach poniżej w kolejności odpowiadającej numerom przy zdjęciach. Po ich zakończeniu skrót do kalendarza będzie dostępny na pulpicie telefonu.
+                <br><br>
+    <strong>🔍Kliknij w zdjęcie, aby powiększyć.</strong>
 
     <div class="gallery">
-        <img src="images/krok2-1.jpeg" alt="Krok 2 - zdjęcie 1" onclick="openLightbox(this.src)">
-        <img src="images/krok2-2.jpeg" alt="Krok 2 - zdjęcie 2" onclick="openLightbox(this.src)">
-    </div>
+        <div class="img-box" onclick="openLightbox(this.querySelector('img').src)">
+    <span class="img-number">1</span>
+    <img src="images/krok2-1.jpeg" alt="Krok 2 - zdjęcie 1">
 </div>
 
             <div class="step">
